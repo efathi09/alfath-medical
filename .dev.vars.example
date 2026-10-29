@@ -1,0 +1,21 @@
+# Copy to .dev.vars (local dev) — never commit the real value.
+# Cloudflare Pages: set these same variables in
+#   Dashboard -> Workers & Pages -> your project -> Settings -> Variables and Secrets
+DATABASE_URL=""
+
+# --- Admin auth (Phase 3) ---
+ADMIN_PASSWORD="admin123"
+ADMIN_SECRET="alfath-dev-secret-change-me"
+
+# --- WhatsApp Cloud API (Phase 4) ---
+# All of these can instead be set from the admin UI (Admin -> WhatsApp); values
+# here take precedence. The access token is a secret and is best kept in env.
+WHATSAPP_TOKEN=""
+WHATSAPP_PHONE_ID=""
+WHATSAPP_OWNER="201157447575"
+WHATSAPP_VERIFY_TOKEN=""
+WHATSAPP_APP_SECRET=""
+WHATSAPP_API_VERSION="v21.0"
+WHATSAPP_COUNTRY_CODE="20"
+# Set to 1 to log sends without calling Meta (useful for local testing).
+WHATSAPP_DRY_RUN=""

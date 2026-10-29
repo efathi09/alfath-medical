@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d9488" />
+    <meta
+      name="description"
+      content="الفتح للتجارة الطبية — أجهزة طبية، مستلزمات طلاب الطب، أغذية صحية، ومستلزمات طبية بأفضل الأسعار مع خدمة التوصيل."
+    />
+    <title>الفتح | Al Fath — متجر المستلزمات الطبية</title>
+
+    <!-- Self-hosted Tajawal (see scripts/vendor-fonts.mjs). No external request at
+         runtime so the app renders instantly and works offline. -->
+    <link rel="stylesheet" href="/fonts/tajawal.css" />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/tajawal-400-U_0600-06FF_.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/tajawal-700-U_0600-06FF_.woff2" crossorigin />
+    <link rel="icon" href="/logo-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" as="image" href="/splash-logo.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Safety net for the native splash: the native overlay is hidden by the app once the
+      // app has been painted (see src/app/NativeSplash.jsx). The timer is armed by the app
+      // bundle itself, so it measures the time the app had to start, not the time the
+      // device needed to boot. If the app never paints, dismiss the splash anyway so the
+      // user is not stuck looking at the logo.
+      window.__armSplashWatchdog = function () {
+        setTimeout(function () {
+          if (window.__appPainted) return
+          try {
+            var c = window.Capacitor
+            if (c && c.Plugins && c.Plugins.NativeSplash) {
+              c.Plugins.NativeSplash.hide({ fadeOutDuration: 0 })
+            }
+            if (c && c.Plugins && c.Plugins.SplashScreen) {
+              c.Plugins.SplashScreen.hide({ fadeOutDuration: 0 })
+            }
+          } catch (e) {
+            /* nothing else to do */
+          }
+          window.dispatchEvent(new Event('splash:force-hide'))
+        }, 15000)
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">الفتح الطبية</string>
+    <string name="title_activity_main">الفتح الطبية</string>
+    <string name="package_name">com.alfath.medical</string>
+    <string name="custom_url_scheme">com.alfath.medical</string>
+</resources>

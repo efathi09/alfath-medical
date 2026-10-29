@@ -1,0 +1,11 @@
+# Cloudflare Pages configuration.
+#
+# Deploy with:
+#   npm run build
+#   npx wrangler pages deploy dist --project-name alfath-medical
+#
+# Pages Functions live in ./functions and are auto-detected: every file under
+# functions/api/*.js becomes a route at /api/*.
+name = "alfath-medical"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "dist"

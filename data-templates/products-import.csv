@@ -1,0 +1,4 @@
+﻿id,sku,name_ar,name_en,category,brand,price,oldPrice,stock,minOrder,rating,reviews,unit_ar,unit_en,badges,keywords,isActive,sortOrder
+,ALF-1001,جهاز قياس ضغط الدم الرقمي,Digital Blood Pressure Monitor,clinical,Omron,1850,2100,25,1,4.7,12,قطعة,unit,bestSeller|offer,ضغط|قياس ضغط,true,1
+,ALF-1002,مقياس حرارة رقمي,Digital Thermometer,clinical,Braun,320,,60,1,4.5,8,قطعة,unit,,حرارة,true,2
+,ALF-1003,كمامات طبية 3 طبقات (علبة 50),3-Ply Medical Masks (Box of 50),disposable,Al Fath,150,180,200,5,4.8,34,علبة,box,offer,كمامات|وقاية,true,3
